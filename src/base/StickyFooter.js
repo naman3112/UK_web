@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
     padding: theme.spacing(1),
-    backgroundColor: theme.palette.primary.dark,
+    backgroundColor: "#242122",
     display: "flex",
     flexDirection: "column",
   },
@@ -87,11 +87,12 @@ function ScrollTop(props) {
 
   const handleClick = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector(
-      "#back-to-top-anchor"
+      "#go-to-top"
     );
-
     if (anchor) {
-      anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+      console.log(anchor)
+      anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+   
     }
   };
 
@@ -120,8 +121,7 @@ function Copyright() {
     <Typography variant="body2" className={classes.copyright}>
       {"Copyright © "}
       <Link href="/" className={classes.company}>
-        International Conference on Innovations and Ideas towards Patents
-        (ICIIP)
+      International Conference on Computing and Communication Networks (ICCCN-2021)
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -194,9 +194,9 @@ export default function StickyFooter(props) {
           },
           children: `Report A Bug`,
         })}
-        <ScrollTop {...props}>
+        <ScrollTop {...props} style={{backgroundColor: "black"}}>
           {DynamicLoader(Fab, {
-            color: "secondary",
+            
             size: "small",
             "aria-label": "scroll back to top",
             children: DynamicLoader(ArrowUpIcon),

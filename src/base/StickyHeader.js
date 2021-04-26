@@ -2,7 +2,8 @@ import React, { lazy } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import siteLogo from "../assets/igdtuwLogo.png"
+import siteLogo from "../assets/ICCNLogo.jpeg";
+
 import { DynamicLoader } from "../routing/base/Router";
 import Drawer from "./Drawer";
 import Typography from "@material-ui/core/Typography";
@@ -19,8 +20,9 @@ const useStyles = makeStyles((theme) => ({
     color: "#666",
   },
   logoSec: {
-    width: "5vw",
-    
+    height: "80px",
+    width: "150px",
+   
   },
   searchSec: {
     display: "flex",
@@ -36,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 
   },
   eleSearch: {
-    color: 'white',
+    color :"#666",
     padding: '10px',
     fontWeight: 'bold',
     textDecoration: 'none',
@@ -96,9 +98,10 @@ export default function PrimarySearchAppBar() {
 
   return (
     <AppBar
-      position="static"
+      position="fixed"
       id="back-to-top-anchor"
       className={classes.header}
+      style={{backgroundColor :"#f6f6f6"}}
     >
       <Toolbar>
         <span className={classes.menuHam}>
@@ -106,22 +109,8 @@ export default function PrimarySearchAppBar() {
           <Drawer />
         </span>
 
-        <section className={classes.menuSec}></section>
-        <section className={classes.logoSec}>
-          {DynamicLoader(Grid, {
-            container: true,
-            spacing: 3,
-            children: DynamicLoader(Grid, {
-              item: true,
-              xs: 12,
-              children: DynamicLoader(Image, {
-                color: "white",
-                src: siteLogo,
-                aspectRatio: 1,
-                alt: "igDtuw",
-              }),
-            }),
-          })}
+        <section >
+           <img className={classes.logoSec} src={siteLogo} />
         </section>
         <section className={classes.searchSec}>
 

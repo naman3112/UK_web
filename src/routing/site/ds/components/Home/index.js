@@ -5,6 +5,9 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
+import univLogo from "../../../../../assets/Univ-ino-logo.jpeg";
+import ICCCN from "../../../../../assets/ICCCN-Logo.jpeg";
+import MMU from "../../../../../assets/MMU.svg.png"
 import publicationPartner from "../../../../../assets/patent.gif";
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -82,10 +85,8 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontFamily: "Montserrat,sans-serif",
     color: "#1c449c",
-
-    textDecoration: "underline",
-
     fontWeight: "700",
+    textTransform: "uppercase",
     [theme.breakpoints.down("lg")]: {
       fontSize: "35px",
       padding: "5px",
@@ -109,6 +110,12 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "sans-serif",
     textAlign: "justify",
     lineHeight: "1.9em",
+    fontFamily: "Montserrat,sans-serif",
+    fontSize: "15px",
+    color: "#666",
+    textIndent: "50px",
+    paddingBottom: "12px",
+
     // ['@media (max-width:1023px)']:{
     //   fontSize: "12px",
     //   padding: "2px",
@@ -122,21 +129,69 @@ const useStyles = makeStyles((theme) => ({
       letterSpacing: "1px",
     },
   },
-  patent: {
-    justifyContent: "center",
-    marginBottom: "10px",
+  ObjectiveTitle: {
+    fontFamily: "Montserrat,sans-serif",
+    color: "#fff",
+    fontWeight: "700",
+    textTransform: "uppercase",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "35px",
+      padding: "5px",
+      fontWeight: "600",
+      letterSpacing: "2px",
+    },
+    // ['@media (max-width:1023px)']:{
+    //   fontSize: "25px",
+    //   padding: "2px",
+    //   fontWeight: "600",
+    //   letterSpacing: "1px"
+    // },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "25px",
+      padding: "2px",
+      fontWeight: "600",
+      letterSpacing: "1px",
+    },
   },
-  typesOfpatent: {
-    justifyContent: "space-evenly",
+  ObjectiveContent: {
+    fontFamily: "sans-serif",
+    textAlign: "justify",
+    lineHeight: "1.9em",
+    fontFamily: "Montserrat,sans-serif",
+    fontSize: "15px",
+    color: "#fff",
+   fontWeight: "200",
+    paddingBottom: "12px",
+
+    // ['@media (max-width:1023px)']:{
+    //   fontSize: "12px",
+    //   padding: "2px",
+    //   fontWeight: "600",
+    //   letterSpacing: "1px"
+    // },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "12px",
+      padding: "2px",
+      fontWeight: "600",
+      letterSpacing: "1px",
+    },
   },
+  ObjectiveBox: {
+    backgroundColor: "#1c449c",
+    width: "40%",
+    ["@media (max-width:1023px)"]: {
+      width: "100%",
+    },
+  },
+
+ 
   publication: {
     fontFamily: "Montserrat,sans-serif",
-    fontSize: "70px",
-    color: "white",
-    letterSpacing: "12px",
-    textDecoration: "underline",
-
-    padding: "15px",
+    fontSize: "35px",
+    color: "#1c449c",
+    letterSpacing: "4px",
+    
+  
     fontWeight: "700",
     ["@media (max-width:1023px)"]: {
       fontSize: "35px",
@@ -145,44 +200,20 @@ const useStyles = makeStyles((theme) => ({
       letterSpacing: "6px",
     },
   },
-  publicationBox: {
-    width: "40%",
-    height: "60%",
-    marginTop: "4%",
-    ["@media (max-width:1023px)"]: {
-      width: "100%",
-    },
+  publicationContainer:{
   },
+  publicationImg:{
+    width: "20%",
+    margin : "18px",
+    backgroundColor : "inherit"
+  }
+ 
 }));
 export default function Example() {
   const classes = useStyles();
 
   return (
-    <div style={{ overflowX: "hidden" }}>
-      <section>
-        <Paper elevation={5} style={{ margin: "2%" }}>
-          <Typography
-            className={classes.title}
-            style={{
-              textAlign: "center",
-              color: "red",
-              textDecoration: "none",
-            }}
-          >
-            International Conference on Innovations and Ideas towards Patents
-            (ICIIP)
-          </Typography>
-
-          <Typography
-            className={classes.content}
-            style={{ textAlign: "center", color: "black" }}
-          >
-            ORGANISED BY :Indira Gandhi Delhi Technical University for Women,
-            Delhi, India <br /> October 30th, 2021
-          </Typography>
-        </Paper>
-      </section>
-
+    <div style={{ overflowX: "hidden", marginTop: "4%" }} id="go-to-top" >
       <section>
         <div className={classes.carousel}>
           <Carousel />
@@ -190,173 +221,113 @@ export default function Example() {
       </section>
 
       <section className={[classes.about, classes.container].join(" ")}>
-        <Card className={classes.aboutBox}>
+        <Paper className={classes.aboutBox} elevation={0}>
           <CardContent>
-            <Typography className={classes.title} component="h2">
-              About Us
+            <Typography className={classes.title}>
+              About ICCN-2021
+              <span
+                style={{
+                  marginLeft: "20%",
+                  display: "block",
+                  backgroundColor: "#1c449c",
+                  width: "100px",
+                  height: "2px",
+                }}
+              ></span>
             </Typography>
             <Typography className={classes.content}>
-              The International Conference on Innovation and Ideas towards
-              Patents (ICIIP-2021) is organized with the objective of bringing
-              together innovative scientists, professors, research scholars,
-              students and industrial experts in the field of Technology and
-              Management to a common forum. The primary goal of the conference
-              is to promote the exchange of innovation, ideas and scientific
-              information between researchers, developers, engineers, students,
-              and practitioners which can be transformed into Patents. Another
-              goal is to promote the transformation of fundamental research into
+              International Conference on Computing and Communication Networks
+              (ICCCN-2021) will be held at Manchester Metropolitan University,
+              Manchester, United Kingdom | November 19-20, 2021. ICCCN-2021 is
+              organized with the objective of bringing together scientists,
+              professors, research scholars, students and industrial experts in
+              the field of Computing and Communication Networks to a common
+              forum. The primary goal of the conference is to promote the
+              exchange of innovative scientific information between researchers,
+              developers, engineers, students, and practitioners. Another goal
+              is to promote the transformation of fundamental research into
               institutional and industrialized research and to convert applied
-              exploration into real time application. ICIIP-2021 will be held at
-              Indira Gandhi Delhi Technical University for Women, New Delhi. All the
-              accepted innovations and ideas (after peer review) are published
-              in INDIAN OFFICIAL JOURNAL OF THE PATENTS.
+              exploration into real time application. All the accepted papers
+              (after double blinded peer review) will be published in Springer’s
+              Lecture Notes in Networks and Systems [Approval Pending] and
+              extended selected papers will be published in the special issues
+              of WoS/Scopus indexed Journals.
             </Typography>
           </CardContent>
-        </Card>
-        <Card className={classes.aboutBox}>
+        </Paper>
+        <Paper className={classes.ObjectiveBox} elevation={0}>
           <CardContent>
-            <Typography className={classes.title} component="h2">
-              Important Dates
+            <Typography className={classes.ObjectiveTitle} component="h2">
+              Objectives
+              <span
+                style={{
+                  marginLeft: "30%",
+                  display: "block",
+                  backgroundColor: "#fff",
+                  width: "100px",
+                  height: "2px",
+                }}
+              ></span>
             </Typography>
-            <div className={classes.impDatesContainerB}>
-              <div className={classes.impDatesContainer}>
-                <div className={classes.impDates}>
-                  <div style={{ fontSize: "15px" }}> May </div>
-                  31
-                </div>
-                <div className={classes.impDateText}>
-                  Deadline For Manuscript Submission
-                </div>
-              </div>
-              <div className={classes.impDatesContainer}>
-                <div className={classes.impDates}>
-                  <div style={{ fontSize: "15px" }}> June </div>
-                  15
-                </div>
-                <div className={classes.impDateText}>Notification of Acceptance / Rejection</div>
-              </div>
-              <div className={classes.impDatesContainer}>
-                <div className={classes.impDates}>
-                  <div style={{ fontSize: "15px" }}> June </div>
-                  10
-                </div>
-                <div className={classes.impDateText}>
-                  Registration Deadline
-                </div>
-              </div>
-              <div className={classes.impDatesContainer}>
-                <div className={classes.impDates}>
-                  <div style={{ fontSize: "15px" }}> June </div>
-                  15
-                </div>
-                <div className={classes.impDateText}>Final Document Due</div>
-              </div>
-              <div className={classes.impDatesContainer}>
-                <div className={classes.impDates}>
-                  <div style={{ fontSize: "15px" }}> Oct </div>
-                  30
-                </div>
-                <div className={classes.impDateText}>Conference Date</div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </section>
-
-      <section className={[classes.container, classes.patent].join(" ")}>
-        <Paper elevation={5} style={{ width: "80%" }}>
-          <CardContent>
-            <div
-              className={[classes.container, classes.typesOfpatent].join(" ")}
-            >
-              <Paper className={classes.aboutBox} style={{ marginTop: "1%" }}>
-                <CardContent>
-                  <Typography
-                    className={classes.title}
-                    variant="h3"
-                    component="h2"
-                  >
-                    About IPR
-                  </Typography>
-                  <Typography className={classes.content}>
-                    Intellectual Property Rights (IPRs) are legal rights that
-                    protect creations and/or inventions resulting from
-                    intellectual activity in the industrial, scientific,
-                    literary or artistic fields. The most common IPRs include
-                    patents, copyrights, marks and trade secrets.
-                  </Typography>
-                </CardContent>
-              </Paper>
-
-              <Paper className={classes.aboutBox} style={{ marginTop: "1%" }}>
-                <CardContent>
-                  <Typography
-                    className={classes.title}
-                    variant="h3"
-                    component="h2"
-                  >
-                    PATENTS
-                  </Typography>
-                  <Typography className={classes.content}>
-                    A Patent is a time limited protection that can be used to
-                    protect inventions (or discoveries) that are new,
-                    non-obvious, and useful, such as a new process of working,
-                    machinery, article of manufacture, or composition of matter.
-                    When a property owner holds a patent, others are prevented,
-                    under law, from offering for sale, making, or using the
-                    product.
-                  </Typography>
-                </CardContent>
-              </Paper>
-            </div>
+            <Typography >
+              <ul className={classes.ObjectiveContent}>
+                <li>
+                  The conference focusses in bridging the gap between Industry
+                  and academia by organizing the workshops by the industry
+                  experts on latest technologies for the participants.
+                </li>
+                <li>
+                  The conference is anticipated to attract a large number of
+                  high quality submissions and stimulate the cutting-edge
+                  research discussions among many academic pioneering
+                  researchers, scientists, industrial engineers, students from
+                  all around the world.
+                </li>
+                <li>Another goal of this conference is to provide opportunities
+                  for academics to receive informal in-depth feedback through
+                  discussions, and to enable them to establish contact with
+                  professionals in various countries and institutions and also
+                  to encourage regional and international communication and
+                  collaboration.
+                </li>
+                <li>
+                  Provide common platform for academic pioneering researchers,
+                  scientists, engineers and students to share their views and
+                  achievements.
+                </li>
+                <li>
+                  Focus on innovative issues at international level by bringing
+                  together the experts from different countries.
+                </li>
+              </ul>
+            </Typography>
           </CardContent>
         </Paper>
       </section>
+
       <section
-        style={{ backgroundColor: "#1c449c", marginTop: "5%" }}
+        style={{ marginTop: "5%" }}
         id="publicationPartner"
       >
-        <Typography className={classes.publication} component="h2">
-          Publication Partners
-        </Typography>
-        <div
-          className={classes.container}
-          style={{ justifyContent: "space-evenly" }}
-        >
-          <Card className={classes.publicationBox}>
-            <CardContent>
-              <Typography
-                className={classes.content}
-                variant="h5"
-                component="h5"
-              >
-                All the accepted Innovations and Ideas will be published in the
-                following Government official journal of patent:
-              </Typography>
-              <Typography
-                className={classes.content}
-                style={{ fontWeight: "900" }}
-                variant="h4"
-                component="h4"
-              >
-                • OFFICIAL JOURNAL OF THE INDIAN PATENT OFFICE{" "}
-              </Typography>
-            </CardContent>
-          </Card>
-          <div style={{ width: "40%", padding: "12px" }}>
-            <a href="https://ipindia.gov.in/" target="_blank" rel="noreferrer">
-              <img
+        <Typography className={classes.publication} >
+        ORGANISING & ASSOCIATED PARTNERS
+        <span
                 style={{
-                  height: "100%",
-                  width: "70%",
-                  backgroundColor: "white",
+                  marginLeft: "26%",
+                  display: "block",
+                  backgroundColor: "#1c449c",
+                  width: "150px",
+                  height: "2px",
                 }}
-                src={publicationPartner}
-                alt=""
-              />
-            </a>
-          </div>
-        </div>
+              ></span>
+        </Typography>
+                <div className={classes.publicationContainer}>
+                  <img className={classes.publicationImg} src={univLogo} />
+                  <img className={classes.publicationImg} src={ICCCN} />
+                  <img className={classes.publicationImg} src={MMU} />
+
+                </div>
+
       </section>
       <section style={{ height: "100px" }}></section>
     </div>
