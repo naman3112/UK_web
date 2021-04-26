@@ -202,7 +202,7 @@ export default function StickyFooter(props) {
             children: DynamicLoader(ArrowUpIcon),
           })}
         </ScrollTop>
-        <section>
+        {/* <section>
 
           <div className={classes.quickLinks}>
           <h4  className={classes.quickItem} style={{textAlign: "center"}}>Quick Links</h4>
@@ -267,7 +267,7 @@ export default function StickyFooter(props) {
              
               </div>
           </div>
-        </section>
+        </section> */}
       </footer>
       {DynamicLoader(LightBox, {
         dialogConfig: dialogConfig,

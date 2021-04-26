@@ -7,31 +7,106 @@ import CardContent from "@material-ui/core/CardContent";
 // import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
-
-// import publicationPartner from "../../../../../assets/patent.gif";
-import logo from "../../../../../assets/igdtuwLogo.png";
-import universal from "../../../../../assets/universalLogo.jpeg"
-import acuminor from "../../../../../assets/rlogow.jpg"
+import logo from "../../../../../assets/mmu-img.jpg";
+import universal from "../../../../../assets/universalLogo.jpeg";
+import acuminor from "../../../../../assets/rlogow.jpg";
+import Background from "../../../../../assets/bg-header.jpg";
 const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
   },
+  aboutHeader: {
+    backgroundImage: `url(${Background})`,
+    display: "block",
+    marginTop: "4%",
+    backgroundSize: "cover",
+    minHeight: "150px",
+    filter: "blur(1px)",
+    width: "100%",
+    backgroundRepeat: "no-repeat",
+    fontFamily: "Montserrat,sans-serif",
+    color: "white",
+    fontWeight: "700",
+    textTransform: "uppercase",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "65px",
+      padding: "5px",
+      fontWeight: "900",
+      letterSpacing: "2px",
+    },
+    // ['@media (max-width:1023px)']:{
+    //   fontSize: "25px",
+    //   padding: "2px",
+    //   fontWeight: "600",
+    //   letterSpacing: "1px"
+    // },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "25px",
+      padding: "2px",
+      fontWeight: "600",
+      letterSpacing: "1px",
+    },
+  },
+  title: {
+    fontFamily: "Montserrat,sans-serif",
+    color: "#1c449c",
+    fontWeight: "700",
+    textTransform: "uppercase",
+    [theme.breakpoints.down("lg")]: {
+      fontSize: "35px",
+      padding: "5px",
+      fontWeight: "600",
+      letterSpacing: "2px",
+    },
+    // ['@media (max-width:1023px)']:{
+    //   fontSize: "25px",
+    //   padding: "2px",
+    //   fontWeight: "600",
+    //   letterSpacing: "1px"
+    // },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "25px",
+      padding: "2px",
+      fontWeight: "600",
+      letterSpacing: "1px",
+    },
+  },
+  content: {
+    fontFamily: "sans-serif",
+    textAlign: "justify",
+    lineHeight: "1.9em",
+    fontFamily: "Montserrat,sans-serif",
+    fontSize: "15px",
+    color: "#666",
+    textIndent: "50px",
+    paddingBottom: "12px",
 
+    // ['@media (max-width:1023px)']:{
+    //   fontSize: "12px",
+    //   padding: "2px",
+    //   fontWeight: "600",
+    //   letterSpacing: "1px"
+    // },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "12px",
+      padding: "2px",
+      fontWeight: "600",
+      letterSpacing: "1px",
+    },
+  },
   aboutBox: {
-    width: "60%",
-    ['@media (max-width:479px)']: {
-      width: "100%"
-    }
-
+    maxWidth: "60%",
+    ["@media (max-width:479px)"]: {
+      width: "100%",
+    },
   },
   aboutImg: {
     width: "20%",
-    ['@media (max-width:479px)']: {
-      height: "50%"
-    }
-
+    ["@media (max-width:479px)"]: {
+      height: "50%",
+    },
   },
 
   impDatesContainer: {
@@ -64,39 +139,37 @@ const useStyles = makeStyles((theme) => ({
 
     margin: "5%",
   },
-  title: {
-    fontFamily: "Montserrat,sans-serif",
-    fontSize: "30px",
-    color: "#1c449c",
-    letterSpacing: "2px",
-    textDecoration: "underline",
-    padding: "5px",
-    fontWeight: "700",
-    ['@media (max-width:479px)']: {
-      fontSize: "15px",
-      padding: "2px",
-      fontWeight: "600",
-      letterSpacing: "1px"
-    }
-  },
+
   content: {
     fontFamily: "sans-serif",
     textAlign: "justify",
     lineHeight: "1.9em",
-    ['@media (max-width:1101px)']: {
+    fontFamily: "Montserrat,sans-serif",
+    fontSize: "15px",
+    color: "#666",
+    textIndent: "50px",
+    paddingBottom: "12px",
+
+    // ['@media (max-width:1023px)']:{
+    //   fontSize: "12px",
+    //   padding: "2px",
+    //   fontWeight: "600",
+    //   letterSpacing: "1px"
+    // },
+    [theme.breakpoints.down("sm")]: {
       fontSize: "12px",
-
+      padding: "2px",
       fontWeight: "600",
-
-    }
+      letterSpacing: "1px",
+    },
   },
   CardContainer: {
     display: "flex",
     flexDirection: "row",
-    ['@media (max-width:1101px)']: {
-      flexDirection: "column"
-    }
-
+    justifyContent: "space-evenly",
+    ["@media (max-width:1101px)"]: {
+      flexDirection: "column",
+    },
   },
   titleSec: {
     fontFamily: "Montserrat,sans-serif",
@@ -142,18 +215,15 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   imgLogo: {
-
     height: "100%",
     [theme.breakpoints.down("lg")]: {
       width: "30vw",
     },
 
     [theme.breakpoints.down("sm")]: {
-      width: "100%"
+      width: "100%",
     },
-  }
-
-
+  },
 }));
 export default function Example() {
   const classes = useStyles();
@@ -161,95 +231,66 @@ export default function Example() {
   return (
     <div>
       <section>
-        <Paper elevation={5} style={{ margin: "2%" }}>
-          <Typography
-            className={classes.titleSec}
-            style={{
-              textAlign: "center",
-              color: "red",
-              textDecoration: "none",
-            }}
-          >
-            International Conference on Innovations and Ideas towards Patents
-            (ICIIP)
-          </Typography>
-
-          <Typography
-            className={classes.contentSec}
-            style={{ textAlign: "center", color: "black" }}
-          >
-            ORGANISED BY :Indira Gandhi Delhi Technical University for Women,
-            New Delhi, India <br /> October 30th, 2021
-          </Typography>
-        </Paper>
+        <div className={classes.aboutHeader}>
+          <div className={classes.aboutHeader}>About us</div>
+        </div>
       </section>
       <section className={[classes.about, classes.container].join(" ")}>
-        <Paper elevation={5} className={classes.CardContainer}>
+        <Paper elevation={0} className={classes.CardContainer}>
           <CardContent className={classes.aboutBox}>
             <Typography className={classes.title} component="h2">
               About The University
             </Typography>
+            <span
+              style={{
+                marginLeft: "23%",
+                display: "block",
+                backgroundColor: "#1c449c",
+                width: "100px",
+                height: "2px",
+              }}
+            ></span>
             <Typography className={classes.content}>
-              Indira Gandhi Delhi Technical University for Women (IGDTUW) has been established in May 2013 vide Delhi State Legislature Act 9, 2012, as a non-affiliating teaching and research University at Delhi to facilitate and promote studies, research, technology, innovation, incubation and extension work in emerging areas of professional education among women, with focus on engineering, technology, applied sciences, management and its allied areas with the objective to achieve excellence in these and related fields.
-              University is offering the following programmes:
-
-              Under Graduate Programmes:
-              • Bachelor of Technology (B. Tech.) in CSE-AI/ CSE/IT/ECE/MAE
-              • Bachelor of Architecture (B. Arch.)
-              • Bachelor of Business Administration (BBA)
-              Post Graduate Programmes:
-              •	Master of Technology (IT – Information Security Management / CSE – Artificial Intelligence / ECE – VLSI Design / Robotics and Automation)
-              •	Master of Planning (Urban Planning)
-              •	Master of Computer Applications (MCA)
-              •	Master of Business Administration (MBA)
-
-              PhD Programmes:
-              Computer Science and Engineering / Information Technology / Computer Applications / Electronics and Communication Engineering / Mechanical Engineering / Physics / Chemistry / Mathematics / English
-              University Achievements
-              In last couple of years, the University has achieved a number of milestones and has been awarded. In NIRF, University improved its ranking to 145th in comparison to previous year as 162. It has been declared as the 2nd fastest growing university by India Today group.
-              <br />
-              Recently, University has been placed under 101 - 200 band in Quality Education parameter by Times Higher Education (THE) ranking for 2021. University has also achieved ISO 9001:2015 QMS Certification. Most recently, IGDTUW participated in the World’s Universities with Real Impact (WURI) Ranking and has been ranked 21st in the special category “Entrepreneurial Spirit” and overall 77th position in “WURI: Innovative Universities for 2020”. FICCI has declared IGDTUW as University of the Year (1-10 Years). Other recognitions also include Mrs. Rahatun Nesa Ali Memorial ISTE National Award for Best Women Engineering College of India and the Notable Mention Award –Delhi by AICTE.
-              The objective of the University is to foster industry relevant research and innovations and empower the women of our country through value based higher education making them employable, self reliant, responsible citizen of the country with concern for environment and society.
+              Manchester Metropolitan University (often abbreviated MMU) is
+              a public university located in Manchester, England. The university
+              traces its origins to the Manchester Mechanics Institute and
+              the Manchester School of Design, which formed Manchester
+              Polytechnic in 1970. Manchester Polytechnic then gained university
+              status under the government's Further and Higher Education Act,
+              becoming the Manchester Metropolitan University in 1992.
+              Manchester Metropolitan University is an accredited member of
+              the Association of MBAs, and member of the University Alliance,
+              the Association of Commonwealth Universities, the North West
+              Universities Association, Association to Advance Collegiate
+              Schools of Business and the European University Association.
+              Today, it is also home to the Manchester School of Art,
+              the Manchester School of Theatre, as well as the Manchester School
+              of Architecture (MSA) administered in collaboration with
+              the University of Manchester. The University's logo is derived
+              from the upper part of the shield of the university's
+              coat-of-arms, with six spade-irons positioned together, suggesting
+              hard toil and entrenchment.
             </Typography>
           </CardContent>
-          <div   >
+          <div>
             <img style={{ width: "100%" }} src={logo} alt="" />
-
-          </div>
-
-        </Paper>
-
-        {/* About Acuminor */}
-        <Paper elevation={5} style={{ marginTop: "2%", justifyContent: 'space-between' }} className={classes.CardContainer}>
-          <CardContent className={classes.aboutBox}>
-            <Typography className={classes.title} variant="h3" component="h2">
-              About (Acuminor)
-            </Typography>
-            <Typography className={classes.content}>
-              To initiate, undertake, carry on, engage in, promote, assist encourage
-              and conduct scientific and technical research, developments,
-              experiments, investigations, inquiries, studies, projects, analysis,
-              examinations, surveys and test of all kinds including, but not limited to
-              those related to economic, fiscal, commercial, financial, agricultural,
-              medical industrial, mining, technical and scientific problems and
-              matters in India/ abroad.
-              To promote scientific and technical research activities in the country
-              through organizing international events, conferences, seminars,
-              workshops, faculty development programmes, charitable activities and
-              promoting research excellence awards for the same.
-            </Typography>
-          </CardContent>
-          <div   >
-            <img className={classes.imgLogo} src={acuminor} alt="" />
           </div>
         </Paper>
 
-        {/* About Universal Innovators */}
-        <Paper elevation={5} style={{ marginTop: "2%" }} className={classes.CardContainer}>
+        <Paper elevation={0} className={classes.CardContainer}>
           <CardContent className={classes.aboutBox}>
-            <Typography className={classes.title} variant="h3" component="h2">
-              About Us(Universal Innovators)
+            <Typography className={classes.title} component="h2">
+              About Universal Inovators
             </Typography>
+            <span
+              style={{
+                marginLeft: "15%",
+                display: "block",
+                backgroundColor: "#1c449c",
+                width: "100px",
+                height: "2px",
+              }}
+            ></span>
             <Typography className={classes.content}>
               Every success story begins with a vision. The Universal Innovators
               (UI) is a private and autonomous body promoting research based
@@ -276,7 +317,6 @@ export default function Example() {
           </div>
         </Paper>
       </section>
-
     </div>
   );
 }
