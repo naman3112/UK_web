@@ -141,7 +141,7 @@ export default function PrimarySearchAppBar() {
 
           <Typography>
             <Link to="/ds/CallForPatents" className={classes.eleSearch}>
-              Call For Patents
+              CFP
             </Link>
           </Typography>
           <Typography>

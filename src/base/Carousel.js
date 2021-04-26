@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
-import igdtuw1 from "../assets/igdtuw1.jpg";
+import igdtuw1 from "../assets/mmu-img.jpg";
 import igdtuw2 from "../assets/igdtuw2.jpeg";
 import icicc from "../assets/iciccimg.gif";
 import qutub from "../assets/qutub.png";
@@ -29,18 +29,12 @@ export default function ControlledCarousel() {
       // activeIndex={index}
       onSelect={handleSelect}
     >
-      <Carousel.Item>
-        <img className={classes.img} src={icicc} alt="First slide" />
-      </Carousel.Item>
+     
       <Carousel.Item>
         <img className={classes.img} src={igdtuw1} alt="Second slide" />
       </Carousel.Item>
-      <Carousel.Item>
-        <img className={classes.img} src={ayodhya} alt="Third slide" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className={classes.img} src={qutub} alt="Third slide" />
-      </Carousel.Item>
+      
+
     </Carousel>
   );
 }

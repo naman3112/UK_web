@@ -9,6 +9,8 @@ import univLogo from "../../../../../assets/Univ-ino-logo.jpeg";
 import ICCCN from "../../../../../assets/ICCCN-Logo.jpeg";
 import MMU from "../../../../../assets/MMU.svg.png"
 import publicationPartner from "../../../../../assets/patent.gif";
+import ICCNlogo from "../../../../../assets/ICCNLogo.jpeg"
+
 const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",

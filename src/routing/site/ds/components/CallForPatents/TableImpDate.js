@@ -10,7 +10,7 @@ import Paper from "@material-ui/core/Paper";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
-    backgroundColor: "#1c449c",
+    backgroundColor: "#242122",
     color: theme.palette.common.white,
     fontSize: 20,
     letterSpacing: "2px",
@@ -34,28 +34,21 @@ const StyledTableCell = withStyles((theme) => ({
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
-    "&:nth-of-type(odd)": {
-      backgroundColor: theme.palette.action.hover
-    }
+    
   }
 }))(TableRow);
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
+function createData(event, date) {
+  return { event,date };
 }
 
 const rows = [
-  createData("ACCOUNT NAME", "UNIVERSAL INOVATORS"),
-  createData("ACCOUNT NUMBER", 510909010118890),
-  createData("BANK", "City Union Bank"),
-  createData("BRANCH", "Sector-8, Rohini, Delhi"),
-  createData("Branch CODE", 244),
-  createData("IFSC CODE", "CIUB0000244"),
-  createData("MICR", 600054027),
-  createData("SWIFT CODE", "CIUBIN5M"),
-  createData("MICR", 600054027),
-  createData("SWIFT CODE", "CIUBIN5M"),
-  createData("ACCOUNT TYPE", "CURRENT")
+  createData("Paper Submission Deadline", "31st July 2021"),
+  createData("Acceptance Notification Due", "31st August 2021"),
+  createData("Registration Due", "30th September 2021"),
+  createData("Camera Ready Submission", "15th October 2021"),
+  createData("Conference Dates", "19th November 2021"),
+ 
 ];
 
 const useStyles = makeStyles({
@@ -72,11 +65,11 @@ export default function CustomizedTables() {
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell align="right">
-              Registration Account Details
+            <StyledTableCell align="center">
+             Important
             </StyledTableCell>
             <StyledTableCell align="left">
-              (Pay via Bank Transfer)
+              Dates
             </StyledTableCell>
           </TableRow>
         </TableHead>
@@ -84,9 +77,9 @@ export default function CustomizedTables() {
           {rows.map((row) => (
             <StyledTableRow key={row.name}>
               <StyledTableCell  align="left"component="th" scope="row">
-                {row.name}
+                {row.event}
               </StyledTableCell>
-              <StyledTableCell align="left">{row.calories}</StyledTableCell>
+              <StyledTableCell align="left">{row.date}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
