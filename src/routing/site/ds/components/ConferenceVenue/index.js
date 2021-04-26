@@ -115,7 +115,7 @@ export default function Example() {
 
   return (
     <div>
-       <section>
+          <section>
         <Paper elevation={5} style={{ margin: "2%" }}>
           <Typography
             className={classes.titleSec}
@@ -123,41 +123,12 @@ export default function Example() {
               textAlign: "center",
               color: "red",
               textDecoration: "none",
+              margin: "20%"
             }}
-          >
-            International Conference on Innovations and Ideas towards Patents
-            (ICIIP)
+          >To Be Updated soon 
           </Typography>
 
-          <Typography
-            className={classes.contentSec}
-            style={{ textAlign: "center", color: "black" }}
-          >
-            ORGANISED BY :Indira Gandhi Delhi Technical University for Women,
-            New Delhi, India <br /> October 30th, 2021
-          </Typography>
         </Paper>
-      </section>
-
-      <section >
-        <img  className={classes.imageL} src={igdtuw} />
-      </section>
-      <section >
-        <Card className={[classes.about, classes.container].join(" ")} >
-          <CardContent className={classes.reachUs}>
-            <Typography className={classes.title} variant="h3" component="h2">
-              Reach us
-            </Typography>
-            <Typography className={classes.content}>
-              Address: James Church, New Church Rd, Opp. St, Kashmere Gate, New
-              Delhi, Delhi 110006, India
-            </Typography>
-          </CardContent>
-         <div className={classes.mapImg} style={{margin: "1%"}}> 
-         <Reachus/>
-         </div>
-        
-        </Card>
       </section>
     </div>
   );

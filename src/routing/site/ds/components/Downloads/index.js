@@ -143,24 +143,13 @@ function Index() {
               textAlign: "center",
               color: "red",
               textDecoration: "none",
+              margin: "20%"
             }}
-          >
-            International Conference on Innovations and Ideas towards Patents
-            (ICIIP)
+          >To Be Updated soon 
           </Typography>
 
-          <Typography
-            className={classes.contentSec}
-            style={{ textAlign: "center", color: "black" }}
-          >
-            ORGANISED BY :Indira Gandhi Delhi Technical University for Women,
-            New Delhi, India <br /> October 30th, 2021
-          </Typography>
         </Paper>
       </section>
-            
-            
-            <h1 >Coming Soon</h1>
         </div>
     )
 }
