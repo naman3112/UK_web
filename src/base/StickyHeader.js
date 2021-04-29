@@ -160,12 +160,12 @@ export default function PrimarySearchAppBar() {
               Downloads
             </Link>
           </Typography>
-{/* 
+
           <Typography>
             <Link to="/ds/Registration" className={classes.eleSearch}>
               Registrations
             </Link>
-          </Typography> */}
+          </Typography>
 
         </section>
         <div className={classes.iconSec}>
