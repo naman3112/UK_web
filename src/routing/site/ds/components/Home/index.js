@@ -207,7 +207,12 @@ const useStyles = makeStyles((theme) => ({
   publicationImg:{
     width: "20%",
     margin : "18px",
-    backgroundColor : "inherit"
+    backgroundColor : "inherit",
+    [theme.breakpoints.down("sm")]: {
+      width: "80%"
+    },
+  
+  
   }
  
 }));
@@ -311,7 +316,7 @@ export default function Example() {
         style={{ marginTop: "5%" }}
         id="publicationPartner"
       >
-        <Typography className={classes.publication} >
+        <Typography className={classes.title} >
         ORGANISING & ASSOCIATED PARTNERS
         <span
                 style={{
