@@ -46,6 +46,20 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: "900",
       letterSpacing: "2px",
     },
+    // ['@media (max-width:1023px)']:{
+    //   fontSize: "25px",
+    //   padding: "2px",
+    //   fontWeight: "600",
+    //   letterSpacing: "1px"
+    // },
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "40px",
+      padding: "2px",
+      fontWeight: "600",
+      letterSpacing: "1px",
+      marginTop: "10%",
+      minHeight: "0px",
+    },
   },
   //compleet
 
@@ -190,12 +204,18 @@ const useStyles = makeStyles((theme) => ({
       letterSpacing: "1px",
     },
   },
+  ulStyle: {
+    marginLeft: "150px",
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "0px"
+    },
+  },
 }));
 export default function Registration() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       <section>
         <div className={classes.aboutHeader}>
           <div className={classes.aboutHeader}>Registrations</div>
@@ -224,7 +244,7 @@ export default function Registration() {
             style={{ fontWeight: "bold", textAlign: "justify" }}
             className={classes.content}
           >
-            <ul>
+            <ul style={{ padding: "20px" }}>
               <li>
                 {" "}
                 (*Standard Paper size – 8 pages. Over length of paper charges
@@ -287,7 +307,7 @@ export default function Registration() {
             style={{ fontWeight: "bold" }}
             className={classes.content}
           >
-            <ul >
+            <ul className={classes.ulStyle}>
               {ItemList.map((ele) => {
                 return <li>{ele}</li>;
               })}
@@ -298,7 +318,11 @@ export default function Registration() {
             className={classes.content}
           >
             <Typography
-              style={{ fontWeight: "bold", fontSize: "20px", textAlign: "left" }}
+              style={{
+                fontWeight: "bold",
+                fontSize: "20px",
+                textAlign: "left",
+              }}
               className={classes.title}
             >
               Note:
