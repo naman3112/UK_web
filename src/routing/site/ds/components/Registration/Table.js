@@ -10,34 +10,32 @@ import Paper from "@material-ui/core/Paper";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
-    backgroundColor: "#1c449c",
+    backgroundColor: "#242122",
     color: theme.palette.common.white,
     fontSize: 20,
-    letterSpacing: "2px",
+    letterSpacing: "1px",
+
     fontFamily: "Montserrat,sans-serif",
-    ['@media (max-width:479px)']:{
-      fontSize: 14,
-      letterSpacing: "1px"
-    }
- 
+    ["@media (max-width:479px)"]: {
+      fontSize: 13,
+      letterSpacing: "0px",
+      padding: "1px",
+      textAlign: "center",
+    },
   },
   body: {
     fontSize: 18,
-    letterSpacing: "2px",
+    letterSpacing: "1px",
     fontFamily: "Montserrat,sans-serif",
-    ['@media (max-width:479px)']:{
+    ["@media (max-width:479px)"]: {
       fontSize: 12,
-      letterSpacing: "1px"
-    }
-  }
+      letterSpacing: "1px",
+    },
+  },
 }))(TableCell);
 
 const StyledTableRow = withStyles((theme) => ({
-  root: {
-    "&:nth-of-type(odd)": {
-      backgroundColor: theme.palette.action.hover
-    }
-  }
+  root: {},
 }))(TableRow);
 
 function createData(name, calories, fat, carbs, protein) {
@@ -45,23 +43,14 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData("ACCOUNT NAME", "UNIVERSAL INOVATORS"),
-  createData("ACCOUNT NUMBER", 510909010118890),
-  createData("BANK", "City Union Bank"),
-  createData("BRANCH", "Sector-8, Rohini, Delhi"),
-  createData("Branch CODE", 244),
-  createData("IFSC CODE", "CIUB0000244"),
-  createData("MICR", 600054027),
-  createData("SWIFT CODE", "CIUBIN5M"),
-  createData("MICR", 600054027),
-  createData("SWIFT CODE", "CIUBIN5M"),
-  createData("ACCOUNT TYPE", "CURRENT")
+  createData("Research Student Participants", "GBP £200", "GBP £300"),
+  createData("Standard Participants", "GBP £150", "GBP £250"),
 ];
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 200
-  }
+    minWidth: 100,
+  },
 });
 
 export default function CustomizedTables() {
@@ -72,21 +61,21 @@ export default function CustomizedTables() {
       <Table className={classes.table} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell align="right">
-              Registration Account Details
-            </StyledTableCell>
+            <StyledTableCell align="left">Category</StyledTableCell>
             <StyledTableCell align="left">
-              (Pay via Bank Transfer)
+              EARLY BIRD (Before 31st August 2021)
             </StyledTableCell>
+            <StyledTableCell align="left">REGULAR </StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <StyledTableRow key={row.name}>
-              <StyledTableCell  align="left"component="th" scope="row">
+              <StyledTableCell align="left" component="th" scope="row">
                 {row.name}
               </StyledTableCell>
-              <StyledTableCell align="left">{row.calories}</StyledTableCell>
+              <StyledTableCell align="leftt">{row.calories}</StyledTableCell>
+              <StyledTableCell align="left">{row.fat}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
