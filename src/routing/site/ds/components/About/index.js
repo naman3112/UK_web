@@ -43,10 +43,12 @@ const useStyles = makeStyles((theme) => ({
     //   letterSpacing: "1px"
     // },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "25px",
+      fontSize: "55px",
       padding: "2px",
       fontWeight: "600",
       letterSpacing: "1px",
+      marginTop: "10%",
+      minHeight: "0px"
     },
   },
   title: {
@@ -99,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
   aboutBox: {
     maxWidth: "60%",
     ["@media (max-width:479px)"]: {
-      width: "100%",
+      maxWidth: "100%",
     },
   },
   aboutImg: {
